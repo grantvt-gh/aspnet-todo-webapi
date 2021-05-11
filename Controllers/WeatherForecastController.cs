@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 namespace TodoApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -24,6 +23,7 @@ namespace TodoApi.Controllers
         }
 
         [HttpGet]
+        [Route("/")]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
